@@ -77,7 +77,8 @@ if (outStock) {
     failOnStatusCode: false,         // on veut juste lire le status
   })
     .its('status')
-    .should('eq', 200);               // on s'attend à un 400 Bad Request (ou 409 Conflict selon l'API)
+    .should('eq', 200);              // 👉 l’API renvoie 200 = COMPORTEMENT BUGGÉ constaté
+}
       });
     });
   });
