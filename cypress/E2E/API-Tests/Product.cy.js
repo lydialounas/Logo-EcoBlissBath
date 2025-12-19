@@ -21,8 +21,8 @@ describe('Produits – lecture (GET)', () => {
         expect(token, 'JWT reçu').to.exist;
       });
   });
-
-  it('GET /products -> renvoie une liste non vide avec champs clés', () => {
+// Vérifier que la liste des produits est bien accessible et exploitable
+  it('GET /products -> renvoie une liste non vide avec champs clés', () => {             
     cy.request({
       method: 'GET',
       url: `${api}/products`,
@@ -45,7 +45,7 @@ describe('Produits – lecture (GET)', () => {
       anyId = p.id; // mémorise un id existant pour le test suivant
     });
   });
-
+// On teste aussi l’endpoint random pour vérifier qu’il renvoie bien trois produits aléatoires que l'api choisi elle meme !
   it('GET /products/random -> renvoie exactement 3 produits', () => {
     cy.request({
       method: 'GET',
@@ -65,7 +65,7 @@ describe('Produits – lecture (GET)', () => {
       });
     });
   });
-
+// Vérifier que le détail d'un produit fonctionne correctement
   it('GET /products/{id} -> détail cohérent avec la liste', () => {
     // Sécurité : si anyId n’est pas défini, relit la liste
     const ensureId = anyId

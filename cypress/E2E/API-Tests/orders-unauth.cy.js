@@ -9,8 +9,8 @@ describe('Orders - accès non authentifié', () => {
       // 👇 important : on n’envoie PAS de header Authorization
       failOnStatusCode: false, // on s’attend à une erreur contrôlée
     }).then(({ status }) => {
-      // Suivant les configs c'est 401 (Unauthorized) ou 403 (Forbidden)
-      expect([401, 403]).to.include(status);
+      // Suivant les configs c'est 401 (Unauthorized) ou 403 (Forbidden  pas le bon droit)
+      expect([401]).to.include(status);
     });
   });
 });

@@ -1,5 +1,5 @@
   
-import user  from '../../fixtures/example.json';
+  
  
  
  describe('post /auth/login', () => {

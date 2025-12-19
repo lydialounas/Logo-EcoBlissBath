@@ -27,7 +27,7 @@ describe('Panier complet via API (avec orderLines)', () => {
           method: 'GET',
           url: `${api}/orders`,
           headers: auth(token),
-          failOnStatusCode: false,                      // permet de ne pas échouer si l'API renvoie 404 (panier vide)
+          failOnStatusCode: false,                      // permet de ne pas échouer si l'API renvoie 404 (panier vide ce qui est normal )
         }).then((res) => {
           if (res.status === 404) return;               // si aucun panier, on passe
           expect(res.status).to.eq(200);                // sinon on vérifie qu'on a bien reçu 200 OK
@@ -77,8 +77,7 @@ if (outStock) {
     failOnStatusCode: false,         // on veut juste lire le status
   })
     .its('status')
-    .should('eq', 200);              // 👉 l’API renvoie 200 = COMPORTEMENT BUGGÉ constaté
-}
+    .should('eq', 200);               // on s'attend à un 400 Bad Request (ou 409 Conflict selon l'API)
       });
     });
   });
