@@ -6,6 +6,27 @@ Eco Bliss Bath est une start-up spécialisée dans la vente de produits de beaut
 
 Prérequis pour exécuter le projet : Node.js, Docker, NPM et Cypress.
 
+
+## Objectifs de la campagne de tests
+
+Les objectifs de cette campagne de tests automatisés sont les suivants :
+
+- Vérifier le bon fonctionnement de la **connexion utilisateur**
+- Vérifier la **gestion du panier**, fonctionnalité centrale du parcours client
+- Détecter les anomalies métier côté backend
+- Faciliter les tests de **régression** lors des futures évolutions de l’application
+
+---
+
+## Périmètre des tests
+
+## Fonctionnalités testées
+
+- Connexion utilisateur (authentification)
+- Panier (ajout de produits et cohérence des données)
+- API TEST
+- Smock tests
+
 ## Installation
 
 1. **Téléchargez ou clonez le dépôt**  
