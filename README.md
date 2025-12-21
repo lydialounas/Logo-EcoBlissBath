@@ -132,3 +132,6 @@ Code postal
 
 ❗ 5. Panier incohérent
 
+## IMPACT SUR LE DÉPLOIEMENT 
+
+Je ne recommande pas la mise en production dans cet état. NON GO
